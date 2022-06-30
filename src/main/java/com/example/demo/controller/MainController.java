@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.example.demo.form.SignupForm;
@@ -30,8 +31,13 @@ public class MainController {
 		return "/signup";
 	}
 	
-	@GetMapping("/index")
+	@GetMapping("/")
 	public String index() {
+		return "/index";
+	}
+	
+	@GetMapping("/index")
+	public String index(Model model) {
 		return "/index";
 	}
 }
