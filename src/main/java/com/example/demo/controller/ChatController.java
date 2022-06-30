@@ -44,7 +44,7 @@ public class ChatController {
 	 * @param groupMemberForm
 	 * @return
 	 */
-	@GetMapping("/chat")
+	@PostMapping("/chat")
 	public String chat(Model model, @ModelAttribute("GroupForm")GroupForm groupForm, ChatForm chatForm) {
 		List<ChatMemberEntity> chatList = chatMemberService.getChatListByUserIdAndGroupId(groupForm);
 		readService.getUnreadCountByChatMemberEntityList(chatList);
@@ -60,7 +60,7 @@ public class ChatController {
 	 * @return
 	 */
 	@GetMapping("/chat/addChat")
-	public String addChat(Model model, @ModelAttribute("groupForm")GroupForm groupForm) {
+	public String addChat(Model model, @ModelAttribute("groupForm")GroupForm groupForm, ChatForm chatForm) {
 		model.addAttribute("groupForm", groupForm);
 		System.out.println(groupForm.getGroup_id());
 		return "/chat/addChat";

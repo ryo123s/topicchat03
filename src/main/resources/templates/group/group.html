@@ -53,8 +53,8 @@
 			<div class="main-content">
 				<div th:each="list:${groupList}">
 					<div class="group">
-						<form th:action="@{/chat}" method="get" th:object="${groupForm}" onclick="test('/chat');">
-							<div class="grou"src/main/java/com/example/demo/entity/GroupMemberEntity.java"p-content">
+						<form th:action="@{/chat}" method="post" th:object="${groupForm}">
+							<div class="group-content">
 								<div class="left-container">
 							   	<div class="groupname">
 							   		<p th:text="${list.groupname}"></p>
