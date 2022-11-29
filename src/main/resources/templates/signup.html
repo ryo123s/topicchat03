@@ -12,24 +12,7 @@
 	<div class="header-container">
 		<div class="top-bar">
 			<div class="left-contents">
-				<h1>Topic Chat????</h1>
-			</div>
-			<div class="right-contents">
-				<div class="">
-					<form th:action="@{/}" method="get">
-						<button type="submit">HOME</button>
-					</form>
-				</div>
-				<div class="">
-					<form th:action="@{/contact/contact}" method="get">
-						<button type="submit">CONTACT</button>
-					</form>
-				</div>
-				<div class="">
-					<form th:action="@{/}" method="get">
-						<button type="submit">MYPAGE</button>
-					</form>
-				</div>
+				<h1>Topic Chat</h1>
 			</div>
 		</div>
 	</div>
@@ -49,21 +32,25 @@
 					<div class="add-form">
 						<div>
 							<label for="user_id">User ID</label>
+							<div class="error-message" th:errors="*{user_id}"></div>
 							<input type="text" id="user_id" name="user_id" class="add-text" placeholder="ユーザーIDを入力する">
 							<div class="text_underline"></div>
 						</div>
 						<div>
 							<label for="username">User Name</label>
+							<div class="error-message" th:errors="*{username}"></div>
 							<input type="text" id="username" name="username" class="add-text" placeholder="ユーザー名を入力する">
 							<div class="text_underline"></div>
 						</div>
 						<div>
 							<label for="password">Password</label>
+							<div class="error-message" th:errors="*{password}"></div>
 							<input type="password" id="password" name="password" class="add-text" placeholder="コメントを入力する">
 							<div class="text_underline"></div>
 						</div>
 						<div>
 							<label for="comment">Comment</label>
+							<div class="error-message" th:errors="*{comment}"></div>
 							<input type="text" id="comment" name="comment" class="add-text" placeholder="コメントを入力する">
 							<div class="text_underline"></div>
 						</div>

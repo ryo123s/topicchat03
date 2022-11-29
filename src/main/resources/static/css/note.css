@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+.note-wrapper{
+	width: 80%;
+	padding: 30px 0;
+	display: table;
+}
+
+.note-wrapper .note-form{
+	/*text-align: center;*/
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.note_container{
+  box-sizing: border-box;
+}
+.note_container input[type="text"]{
+  border: 1px solid #999;
+  padding: 3px 5px;
+  border-radius: 20px;
+  height: 3.0em;
+  width: 80%;
+  overflow: hidden;
+  font-size: 1.1em;
+}
+.note_container input[type="text"]:focus {
+  outline: 0;
+}
+
+.main-content .note-wrapper .note-form label{
+	display: block;
+	font-size:20px;
+	margin: 30px 0 5px;
+}
+
+.main-content .note-wrapper{
+	margin: 10px 10%;
+}
+
+.main-content .note-wrapper .note-form .btn-box{
+	margin-top: 50px;
+}
